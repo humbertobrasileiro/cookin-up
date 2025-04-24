@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/Banner.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1745349031683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745349043246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n     <div class=\"apresentacao\">\r\n       <img src=\"./assets/imagens/logo.svg\" alt=\"Logo do Cookin'Up\">\r\n     </div>\r\n     <img src=\"./assets/imagens/foto-banner.png\" alt=\"Foto de uma mulher cozinhando \">\r\n+  </header>\r\n \r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745349287027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n       <img src=\"./assets/imagens/logo.svg\" alt=\"Logo do Cookin'Up\">\r\n     </div>\r\n     <img src=\"./assets/imagens/foto-banner.png\" alt=\"Foto de uma mulher cozinhando \">\r\n   </header>\r\n-\r\n </template>\r\n \r\n <style scoped>\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745349304980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,5 +6,56 @@\n     <img src=\"./assets/imagens/foto-banner.png\" alt=\"Foto de uma mulher cozinhando \">\r\n   </header>\r\n </template>\r\n \r\n-<style scoped></style>\n\\ No newline at end of file\n+<style scoped>.banner {\r\n+  padding: 4rem 7.5rem;\r\n+  color: var(--creme);\r\n+\r\n+  display: flex;\r\n+  justify-content: space-between;\r\n+  align-items: center;\r\n+  column-gap: 3.25rem;\r\n+}\r\n+\r\n+.logo {\r\n+  height: 4.5rem;\r\n+  margin-bottom: 3rem;\r\n+}\r\n+\r\n+.frase-cabecalho {\r\n+  margin-bottom: 2rem;\r\n+}\r\n+\r\n+.texto-verde {\r\n+  color: var(--verde-medio, #3D6D4A);\r\n+}\r\n+\r\n+.foto-banner {\r\n+  width: 35rem;\r\n+}\r\n+\r\n+@media only screen and (max-width: 1300px) {\r\n+  .banner {\r\n+    padding: 4rem 3.75rem;\r\n+    flex-direction: column;\r\n+    align-items: center;\r\n+    gap: 1rem;\r\n+  }\r\n+\r\n+  .logo {\r\n+    display: block;\r\n+    margin-left: auto;\r\n+    margin-right: auto;\r\n+  }\r\n+}\r\n+\r\n+@media only screen and (max-width: 767px) {\r\n+  .banner {\r\n+    padding: 4rem 1.5rem;\r\n+  }\r\n+\r\n+  .foto-banner {\r\n+    width: min(100%, 21.25rem);\r\n+  }\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745349329038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,56 +7,56 @@\n   </header>\r\n </template>\r\n \r\n <style scoped>\r\n-.banner {\r\n-  padding: 4rem 7.5rem;\r\n-  color: var(--creme);\r\n+  .banner {\r\n+    padding: 4rem 7.5rem;\r\n+    color: var(--creme);\r\n \r\n-  display: flex;\r\n-  justify-content: space-between;\r\n-  align-items: center;\r\n-  column-gap: 3.25rem;\r\n-}\r\n-\r\n-.logo {\r\n-  height: 4.5rem;\r\n-  margin-bottom: 3rem;\r\n-}\r\n-\r\n-.frase-cabecalho {\r\n-  margin-bottom: 2rem;\r\n-}\r\n-\r\n-.texto-verde {\r\n-  color: var(--verde-medio, #3D6D4A);\r\n-}\r\n-\r\n-.foto-banner {\r\n-  width: 35rem;\r\n-}\r\n-\r\n-@media only screen and (max-width: 1300px) {\r\n-  .banner {\r\n-    padding: 4rem 3.75rem;\r\n-    flex-direction: column;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n     align-items: center;\r\n-    gap: 1rem;\r\n+    column-gap: 3.25rem;\r\n   }\r\n \r\n   .logo {\r\n-    display: block;\r\n-    margin-left: auto;\r\n-    margin-right: auto;\r\n+    height: 4.5rem;\r\n+    margin-bottom: 3rem;\r\n   }\r\n-}\r\n \r\n-@media only screen and (max-width: 767px) {\r\n-  .banner {\r\n-    padding: 4rem 1.5rem;\r\n+  .frase-cabecalho {\r\n+    margin-bottom: 2rem;\r\n   }\r\n \r\n+  .texto-verde {\r\n+    color: var(--verde-medio, #3D6D4A);\r\n+  }\r\n+\r\n   .foto-banner {\r\n-    width: min(100%, 21.25rem);\r\n+    width: 35rem;\r\n   }\r\n-}\r\n+\r\n+  @media only screen and (max-width: 1300px) {\r\n+    .banner {\r\n+      padding: 4rem 3.75rem;\r\n+      flex-direction: column;\r\n+      align-items: center;\r\n+      gap: 1rem;\r\n+    }\r\n+\r\n+    .logo {\r\n+      display: block;\r\n+      margin-left: auto;\r\n+      margin-right: auto;\r\n+    }\r\n+  }\r\n+\r\n+  @media only screen and (max-width: 767px) {\r\n+    .banner {\r\n+      padding: 4rem 1.5rem;\r\n+    }\r\n+\r\n+    .foto-banner {\r\n+      width: min(100%, 21.25rem);\r\n+    }\r\n+  }\r\n </style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745349031683,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <header class=\"banner\">\r\n    <div class=\"apresentacao\">\r\n      <img src=\"./assets/imagens/logo.svg\" alt=\"Logo do Cookin'Up\">\r\n    </div>\r\n    <img src=\"./assets/imagens/foto-banner.png\" alt=\"Foto de uma mulher cozinhando \">\r\n\r\n</template>\r\n\r\n<style scoped>\r\n</style>"
+        }
+    ]
+}

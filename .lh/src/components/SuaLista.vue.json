@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/SuaLista.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1745506512885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745506910008,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,21 @@\n <script lang=\"ts\">\r\n+import type { PropType } from 'vue';\r\n+import Tag from './Tag.vue';\r\n+\r\n export default {\r\n-\r\n+  props: {\r\n+    ingredientes: { type: Object as PropType<string[]>, required: true }\r\n+  },\r\n+  components: { Tag }\r\n }\r\n </script>\r\n \r\n-<template></template>\r\n+<template>\r\n+  <ul class=\"ingredientes-sua-lista\">\r\n+    <li v-for=\"ingrediente in ingredientes\" class=\"ingrediente\" :key=\"ingrediente\">\r\n+      <Tag :texto=\"ingrediente\" ativa />\r\n+    </li>\r\n+  </ul>\r\n+</template>\r\n \r\n <style scoped></style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745507041339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n </script>\r\n \r\n <template>\r\n   <ul class=\"ingredientes-sua-lista\">\r\n-    <li v-for=\"ingrediente in ingredientes\" class=\"ingrediente\" :key=\"ingrediente\">\r\n+    <li v-for=\"ingrediente in ingredientes\" :key=\"ingrediente\">\r\n       <Tag :texto=\"ingrediente\" ativa />\r\n     </li>\r\n   </ul>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1745507279214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,33 @@\n import Tag from './Tag.vue';\r\n \r\n export default {\r\n   props: {\r\n-    ingredientes: { type: Object as PropType<string[]>, required: true }\r\n+    ingredientes: { type: Array as PropType<string[]>, required: true }\r\n   },\r\n   components: { Tag }\r\n }\r\n </script>\r\n \r\n <template>\r\n-  <ul class=\"ingredientes-sua-lista\">\r\n-    <li v-for=\"ingrediente in ingredientes\" :key=\"ingrediente\">\r\n-      <Tag :texto=\"ingrediente\" ativa />\r\n-    </li>\r\n-  </ul>\r\n+  <section>\r\n+    <span class=\"subtitulo-lg sua-lista-texto\">\r\n\\ No newline at end of file\n+      Sua lista:\r\n+    </span>\r\n+\r\n+    <ul class=\"ingredientes-sua-lista\">\r\n+      <li v-for=\"ingrediente in ingredientes\" :key=\"ingrediente\">\r\n+        <Tag :texto=\"ingrediente\" ativa />\r\n+      </li>\r\n+    </ul>\r\n+\r\n+  </section>\r\n </template>\r\n \r\n-<style scoped></style>\n+<style scoped>\r\n+.sua-lista-texto {\r\n+  color: var(--coral, #F0633C);\r\n+  display: block;\r\n+  text-align: center;\r\n+  margin-bottom: 1.5rem;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745507327861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,5 +31,12 @@\n   display: block;\r\n   text-align: center;\r\n   margin-bottom: 1.5rem;\r\n }\r\n+\r\n+.ingredientes-sua-lista {\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  gap: 1rem 1.5rem;\r\n+  flex-wrap: wrap;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745507407521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,14 +15,19 @@\n     <span class=\"subtitulo-lg sua-lista-texto\">\r\n       Sua lista:\r\n     </span>\r\n \r\n-    <ul class=\"ingredientes-sua-lista\">\r\n+    <ul v-if=\"ingredientes.length\" class=\"ingredientes-sua-lista\">\r\n       <li v-for=\"ingrediente in ingredientes\" :key=\"ingrediente\">\r\n         <Tag :texto=\"ingrediente\" ativa />\r\n       </li>\r\n     </ul>\r\n \r\n+    <p v-else class=\"paragrafo lista-vazia\">\r\n+      <img src=\"../assets/imagens/icones/lista-vazia.svg\" alt=\"Ícone de pesquisa\">\r\n+      Sua lista está vazia, selecione ingredientes para iniciar.\r\n+    </p>\r\n+\r\n   </section>\r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745507434685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,5 +43,16 @@\n   justify-content: center;\r\n   gap: 1rem 1.5rem;\r\n   flex-wrap: wrap;\r\n }\r\n+\r\n+.lista-vazia {\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  align-items: center;\r\n+  flex-wrap: wrap;\r\n+  gap: 0.25rem;\r\n+\r\n+  color: var(--coral, #F0633C);\r\n+  text-align: center;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745507503654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,5 +54,8 @@\n \r\n   color: var(--coral, #F0633C);\r\n   text-align: center;\r\n }\r\n+\r\n+color: var(--coral, #F0633C);\r\n+text-align: center;\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745507520955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,8 +54,5 @@\n \r\n   color: var(--coral, #F0633C);\r\n   text-align: center;\r\n }\r\n-\r\n-color: var(--coral, #F0633C);\r\n-text-align: center;\r\n </style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745506512885,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\nexport default {\r\n\r\n}\r\n</script>\r\n\r\n<template></template>\r\n\r\n<style scoped></style>"
+        }
+    ]
+}

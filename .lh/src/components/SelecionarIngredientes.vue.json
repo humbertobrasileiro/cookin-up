@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/components/SelecionarIngredientes.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1745410011557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745410055072,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,22 @@\n <script lang=\"ts\">\r\n export default {\r\n+  data() {\r\n+    return {\r\n+      ingredientes: [\r\n+        {\r\n+          \"nome\": \"Laticínios e Ovos\",\r\n+          \"ingredientes\": [\"Ovos\", \"Queijo\", \"Leite\", \"Manteiga\", \"Creme de Leite\", \"Iogurte\", \"Leite Condensado\", \"Sorvete\"],\r\n+          \"rotulo\": \"laticinios_e_ovos\"\r\n+        },\r\n+        {\r\n+          \"nome\": \"Farinhas e Fermentos\",\r\n+          \"ingredientes\": [\"Farinha de trigo\", \"Polvilho\", \"Farinha de rosca\", \"Canjica\", \"Farinha de mandioca\", \"Fubá\", \"Linhaça\", \"Fermento químico\"],\r\n+          \"rotulo\": \"farinhas_e_fermentos\"\r\n+        }\r\n+      ]\r\n+    }\r\n+  }\r\n }\r\n </script>\r\n \r\n <template></template>\r\n"
+                },
+                {
+                    "date": 1745410260021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,13 @@\n   }\r\n }\r\n </script>\r\n \r\n-<template></template>\r\n+<template>\r\n+  <section class=\"selecionar-ingredientes\">\r\n+    <h1 class=\"cabecalho titulo-ingredientes\">Ingredientes</h1>\r\n+  </section>\r\n+</template>\r\n \r\n <style scoped>\r\n .selecionar-ingredientes {\r\n   display: flex;\r\n"
+                },
+                {
+                    "date": 1745410353373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,10 @@\n \r\n <template>\r\n   <section class=\"selecionar-ingredientes\">\r\n     <h1 class=\"cabecalho titulo-ingredientes\">Ingredientes</h1>\r\n+\r\n+    <p>Selecione abaixo os ingredientes que você quer usar nesta receita:</p>\r\n   </section>\r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745410395476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,11 @@\n <template>\r\n   <section class=\"selecionar-ingredientes\">\r\n     <h1 class=\"cabecalho titulo-ingredientes\">Ingredientes</h1>\r\n \r\n-    <p>Selecione abaixo os ingredientes que você quer usar nesta receita:</p>\r\n+    <p class=\"paragrafo-lg instrucoes\">\r\n+      Selecione abaixo os ingredientes que você quer usar nesta receita:\r\n+    </p>\r\n   </section>\r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745410491519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <script lang=\"ts\">\r\n export default {\r\n   data() {\r\n     return {\r\n-      ingredientes: [\r\n+      categorias: [\r\n         {\r\n           \"nome\": \"Laticínios e Ovos\",\r\n           \"ingredientes\": [\"Ovos\", \"Queijo\", \"Leite\", \"Manteiga\", \"Creme de Leite\", \"Iogurte\", \"Leite Condensado\", \"Sorvete\"],\r\n           \"rotulo\": \"laticinios_e_ovos\"\r\n@@ -25,8 +25,14 @@\n \r\n     <p class=\"paragrafo-lg instrucoes\">\r\n       Selecione abaixo os ingredientes que você quer usar nesta receita:\r\n     </p>\r\n+\r\n+    <ul class=\"categorias\">\r\n+      <li v-for=\"categoria in categorias\" :key=\"categoria.nome\">\r\n+        {{ categoria }}\r\n+      </li>\r\n+    </ul>\r\n   </section>\r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745410607490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,11 @@\n <script lang=\"ts\">\r\n+import { obterCategorias } from '@/http';\r\n+\r\n export default {\r\n   data() {\r\n     return {\r\n-      categorias: [\r\n-        {\r\n-          \"nome\": \"Laticínios e Ovos\",\r\n-          \"ingredientes\": [\"Ovos\", \"Queijo\", \"Leite\", \"Manteiga\", \"Creme de Leite\", \"Iogurte\", \"Leite Condensado\", \"Sorvete\"],\r\n-          \"rotulo\": \"laticinios_e_ovos\"\r\n-        },\r\n-        {\r\n-          \"nome\": \"Farinhas e Fermentos\",\r\n-          \"ingredientes\": [\"Farinha de trigo\", \"Polvilho\", \"Farinha de rosca\", \"Canjica\", \"Farinha de mandioca\", \"Fubá\", \"Linhaça\", \"Fermento químico\"],\r\n-          \"rotulo\": \"farinhas_e_fermentos\"\r\n-        }\r\n-      ]\r\n+      categorias: obterCategorias\r\n     }\r\n   }\r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1745410649408,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http';\r\n+import { obterCategorias } from '@/http/index';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745410663607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     </p>\r\n \r\n     <ul class=\"categorias\">\r\n       <li v-for=\"categoria in categorias\" :key=\"categoria.nome\">\r\n-        {{ categoria }}\r\n+        {{ categoria.nome }}\r\n       </li>\r\n     </ul>\r\n   </section>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1745410693098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http/index';\r\n+import { obterCategorias } from '@/http';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411191661,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http';\r\n+import { obterCategorias } from '@/http/index';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411254329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,12 @@\n       <li v-for=\"categoria in categorias\" :key=\"categoria.nome\">\r\n         {{ categoria.nome }}\r\n       </li>\r\n     </ul>\r\n+\r\n+    <p class=\"dicas\">\r\n+      *Atenção: consideramos que você tem em casa sal, pimenta e água.\r\n+    </p>\r\n   </section>\r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1745411290982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n         {{ categoria.nome }}\r\n       </li>\r\n     </ul>\r\n \r\n-    <p class=\"dicas\">\r\n+    <p class=\"paragrafo dicas\">\r\n       *Atenção: consideramos que você tem em casa sal, pimenta e água.\r\n     </p>\r\n   </section>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1745411341766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http/index';\r\n+import { obterCategorias } from '@/http';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411576325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http';\r\n+import { obterCategorias } from '@/http/index';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411597270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n export default {\r\n   data() {\r\n     return {\r\n-      categorias: obterCategorias\r\n+      categorias: obterCategorias()\r\n     }\r\n   }\r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1745411603701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http/index';\r\n+import { obterCategorias } from '@/http';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411713360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http';\r\n+import { obterCategorias } from '@/http/index';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745411749312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http/index';\r\n+import { obterCategorias } from '@/http';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745417383472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,14 @@\n \r\n export default {\r\n   data() {\r\n     return {\r\n-      categorias: obterCategorias()\r\n+      categorias: []\r\n     }\r\n-  }\r\n+  },\r\n+  created() {\r\n+    this.categorias = await obterCategorias();\r\n+  },\r\n }\r\n </script>\r\n \r\n <template>\r\n"
+                },
+                {
+                    "date": 1745417424170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http';\r\n+import { obterCategorias } from '@/http/index';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745417546018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <script lang=\"ts\">\r\n-import { obterCategorias } from '@/http/index';\r\n+import { obterCategorias } from '@/http';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                },
+                {
+                    "date": 1745418046550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,12 @@\n <script lang=\"ts\">\r\n import { obterCategorias } from '@/http';\r\n+import type ICategoria from '@/interfaces/ICategorias';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n-      categorias: []\r\n+      categorias: [] as ICategoria[]\r\n     }\r\n   },\r\n   async created() {\r\n     this.categorias = await obterCategorias();\r\n"
+                },
+                {
+                    "date": 1745498268778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <script lang=\"ts\">\r\n import { obterCategorias } from '@/http';\r\n-import type ICategoria from '@/interfaces/ICategorias';\r\n+import { ICategoria } from '@/interfaces/ICategorias';\r\n \r\n export default {\r\n   data() {\r\n     return {\r\n"
+                }
+            ],
+            "date": 1745410011557,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\nexport default {\r\n}\r\n</script>\r\n\r\n<template></template>\r\n\r\n<style scoped>\r\n.selecionar-ingredientes {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\n.titulo-ingredientes {\r\n  color: var(--verde-medio, #3D6D4A);\r\n  display: block;\r\n  margin-bottom: 1.5rem;\r\n}\r\n\r\n.instrucoes {\r\n  margin-bottom: 2rem;\r\n}\r\n\r\n.categorias {\r\n  margin-bottom: 1rem;\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 1.5rem;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.dica {\r\n  align-self: flex-start;\r\n  margin-bottom: 3.5rem;\r\n}\r\n\r\n@media only screen and (max-width: 767px) {\r\n  .dica {\r\n    margin-bottom: 2.5rem;\r\n  }\r\n}\r\n</style>"
+        }
+    ]
+}

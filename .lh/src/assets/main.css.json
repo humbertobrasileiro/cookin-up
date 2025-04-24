@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/assets/main.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1745348163107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1745348163107,
+            "name": "Commit-0",
+            "content": ":root {\n  --ocre: #D1451E;\n  --coral: #F0633C;\n  --coral-claro: #FFDBD1;\n  --creme: #FFFAF3;\n  --verde-escuro: #263A29;\n  --verde-medio: #3D6D4A;\n  --cinza: #444444;\n  --cinza-claro: #EFEFEF;\n  --branco: #FFF;\n\n  --font-family-padrao: Nunito Sans, sans-serif;\n  --cabecalhos: Paytone One, sans-serif;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n}\n\nul, li {\n  list-style: none;\n}\n\nbutton {\n  border: 0;\n  background-color: inherit;\n  font: inherit;\n}\n\nbody {\n  min-height: 100vh;\n  color: var(--creme);\n  font-family: var(--font-family-padrao);\n  font-size: 16px;\n  font-weight: 400;\n  font-style: normal;\n  background: url('./imagens/fundo-banner.png'), var(--verde-escuro, #263A29);\n}\n\n.cabecalho-lg {\n  font-family: var(--cabecalhos);\n  font-size: 3.35625em;\n  line-height: 120%; /* 4.0275em */\n}\n\n.cabecalho {\n  font-family: var(--cabecalhos);\n  font-size: 2.75em;\n  line-height: 120%; /* 3.3em */\n}\n\n.subtitulo-lg {\n  font-size: 1.9375em;\n  line-height: 150%; /* 2.90625em */\n}\n\n.paragrafo-lg {\n  font-size: 1.375em;\n  line-height: 150%; /* 2.90625em */\n}\n\n.paragrafo {\n  font-size: 1.125em;\n  line-height: 150%; /* 1.6875em */\n}\n\n@media only screen and (max-width: 767px) {\n  .cabecalho-lg {\n    font-size: 2.75em;\n  }\n\n  .cabecalho {\n    font-size: 2.3125em;\n  }\n\n  .subtitulo-lg {\n    font-size: 1.625em;\n  }\n}"
+        }
+    ]
+}

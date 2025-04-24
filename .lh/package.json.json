@@ -1,0 +1,18 @@
+{
+    "sourceFile": "package.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1745353469547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1745353469547,
+            "name": "Commit-0",
+            "content": "{\n  \"name\": \"cookin-up\",\n  \"version\": \"0.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"vite\",\n    \"build\": \"run-p type-check build-only\",\n    \"preview\": \"vite preview\",\n    \"build-only\": \"vite build\",\n    \"type-check\": \"vue-tsc --noEmit -p tsconfig.app.json --composite false\"\n  },\n  \"dependencies\": {\n    \"vue\": \"^3.3.4\"\n  },\n  \"devDependencies\": {\n    \"@tsconfig/node18\": \"^18.2.0\",\n    \"@types/node\": \"^18.17.5\",\n    \"@vitejs/plugin-vue\": \"^4.3.1\",\n    \"@vue/tsconfig\": \"^0.4.0\",\n    \"npm-run-all\": \"^4.1.5\",\n    \"typescript\": \"~5.1.6\",\n    \"vite\": \"^4.4.9\",\n    \"vue-tsc\": \"^1.8.8\"\n  }\n}"
+        }
+    ]
+}

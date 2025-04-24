@@ -1,0 +1,26 @@
+{
+    "sourceFile": "tsconfig.app.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1745353293831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745353326154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,11 @@\n-\"extends\": \"@vue/tsconfig/tsconfig.dom.json\",\n-\"include\": [\n-  \"env.d.ts\",\n-  \"src/**/*\",\n-  \"src/**/*.vue\"\n-],\n-\"exclude\": [\n-  \"src/**/__tests__/*\"\n-],\n+{\"extends\": \"@vue/tsconfig/tsconfig.dom.json\",\n+\"include\": [\"env.d.ts\", \"src/**/*\", \"src/**/*.vue\"],\n+\"exclude\": [\"src/**/__tests__/*\"],\n \"compilerOptions\": {\n   \"composite\": true,\n   \"baseUrl\": \".\",\n   \"paths\": {\n-    \"@/*\": [\n-      \"./src/*\"\n-    ]\n+    \"@/*\": [\"./src/*\"]\n   }\n }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745411679243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n   \"include\": [\n     \"env.d.ts\",\n     \"src/**/*\",\n     \"src/**/*.vue\",\n-    \"src/*/*.ts\"\n+    \"src/**/*.ts\"\n   ],\n   \"exclude\": [\n     \"src/**/__tests__/*\"\n   ],\n"
+                }
+            ],
+            "date": 1745353293831,
+            "name": "Commit-0",
+            "content": "\"extends\": \"@vue/tsconfig/tsconfig.dom.json\",\n\"include\": [\"env.d.ts\", \"src/**/*\", \"src/**/*.vue\"],\n\"exclude\": [\"src/**/__tests__/*\"],\n\"compilerOptions\": {\n  \"composite\": true,\n  \"baseUrl\": \".\",\n  \"paths\": {\n    \"@/*\": [\"./src/*\"]\n  }\n}\n}"
+        }
+    ]
+}

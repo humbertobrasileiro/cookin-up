@@ -1,0 +1,54 @@
+{
+    "sourceFile": ".vscode/settings.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1745348260060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745408795567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n {\r\n   \"cSpell.words\": [\r\n-    \"Cookin'Up\"\r\n+    \"Cookin'Up\",\r\n+    \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745417092643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n   \"cSpell.words\": [\r\n+    \"Canjica\",\r\n     \"Cookin'Up\",\r\n     \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745417100194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n {\r\n   \"cSpell.words\": [\r\n     \"Canjica\",\r\n     \"Cookin'Up\",\r\n+    \"Fubá\",\r\n     \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745417108802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n {\r\n   \"cSpell.words\": [\r\n     \"Canjica\",\r\n     \"Cookin'Up\",\r\n+    \"Dendê\",\r\n     \"Fubá\",\r\n     \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745417114133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n   \"cSpell.words\": [\r\n+    \"Aceto\",\r\n     \"Canjica\",\r\n     \"Cookin'Up\",\r\n     \"Dendê\",\r\n     \"Fubá\",\r\n"
+                },
+                {
+                    "date": 1745417131502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n {\r\n   \"cSpell.words\": [\r\n     \"Aceto\",\r\n     \"Canjica\",\r\n+    \"cerais\",\r\n     \"Cookin'Up\",\r\n     \"Dendê\",\r\n     \"Fubá\",\r\n     \"Orégano\"\r\n"
+                },
+                {
+                    "date": 1745417136992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n     \"cerais\",\r\n     \"Cookin'Up\",\r\n     \"Dendê\",\r\n     \"Fubá\",\r\n+    \"Gergelim\",\r\n     \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745417143898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n   \"cSpell.words\": [\r\n+    \"Acabaxi\",\r\n     \"Aceto\",\r\n     \"Canjica\",\r\n     \"cerais\",\r\n     \"Cookin'Up\",\r\n"
+                },
+                {
+                    "date": 1745417151636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n     \"Cookin'Up\",\r\n     \"Dendê\",\r\n     \"Fubá\",\r\n     \"Gergelim\",\r\n+    \"Nhoque\",\r\n     \"Orégano\"\r\n   ]\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745348260060,
+            "name": "Commit-0",
+            "content": "{\r\n  \"cSpell.words\": [\r\n    \"Cookin'Up\"\r\n  ]\r\n}"
+        }
+    ]
+}

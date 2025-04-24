@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/Tag.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745505148117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745505673082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+<script lang=\"ts\">\r\n+export default {\r\n+  props: {\r\n+    texto: { type: String, required: true },\r\n+    ativa: Boolean\r\n+  }\r\n+}\r\n+</script>\r\n+\r\n+<template>\r\n+  <span class=\"tag\" :class=\"{ ativa: ativa }\">{{ texto }}</span>\r\n+</template>\r\n+\r\n+<style scoped>\r\n+.tag {\r\n+  display: inline-block;\r\n+  border-radius: 0.5rem;\r\n+  min-width: 4.25rem;\r\n+  padding: 0.5rem;\r\n+  text-align: center;\r\n+  transition: 0.2s;\r\n+  color: var(--cinza);\r\n+  background: var(--cinza-claro);\r\n+  font-weight: 400;\r\n+}\r\n+\r\n+.ativa {\r\n+  color: var(--creme, #FFFAF3);\r\n+  background: var(--coral, #F0633C);\r\n+  font-weight: 700;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745505762344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+<script lang=\"ts\">\r\n+export default {\r\n+  props: {\r\n+    texto: { type: String, required: true },\r\n+    ativa: Boolean\r\n+  }\r\n+}\r\n+</script>\r\n+\r\n+<template>\r\n+  <span class=\"tag\" :class=\"{ ativa: ativa }\">{{ texto }}</span>\r\n+</template>\r\n+\r\n+<style scoped>\r\n+.tag {\r\n+  display: inline-block;\r\n+  border-radius: 0.5rem;\r\n+  min-width: 4.25rem;\r\n+  padding: 0.5rem;\r\n+  text-align: center;\r\n+  transition: 0.2s;\r\n+  color: var(--cinza);\r\n+  background: var(--cinza-claro);\r\n+  font-weight: 400;\r\n+}\r\n+\r\n+.ativa {\r\n+  color: var(--creme, #FFFAF3);\r\n+  background: var(--coral, #F0633C);\r\n+  font-weight: 700;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745505855769,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\r\n </script>\r\n \r\n <template>\r\n-  <span class=\"tag\" :class=\"{ ativa: ativa }\">{{ texto }}</span>\r\n+  <span :class=\"['tag', { ativa }]\">{{ texto }}</span>\r\n </template>\r\n \r\n <style scoped>\r\n .tag {\r\n"
+                }
+            ],
+            "date": 1745505148116,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\nexport default {\r\n  props: {\r\n    texto: { type: String, required: true }\r\n  }\r\n}\r\n</script>\r\n\r\n<template>\r\n  <span class=\"tag\">{{ texto }}</span>\r\n</template>\r\n\r\n<style scoped>\r\n.tag {\r\n  display: inline-block;\r\n  border-radius: 0.5rem;\r\n  min-width: 4.25rem;\r\n  padding: 0.5rem;\r\n  text-align: center;\r\n  transition: 0.2s;\r\n  color: var(--creme, #FFFAF3);\r\n  background: var(--coral, #F0633C);\r\n  font-weight: 700;\r\n}\r\n</style>"
+        }
+    ]
+}
