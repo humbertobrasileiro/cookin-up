@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/IngredienteSelecionavel.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1745580614080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745580688648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,8 @@\n+<script lang=\"ts\">\r\n+import Tag from './Tag.vue';\r\n+</script>\r\n+\r\n <Template>\r\n           <Tag :texto=\"ingrediente\" />\r\n \r\n </Template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745580817610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,21 @@\n <script lang=\"ts\">\r\n import Tag from './Tag.vue';\r\n+\r\n+export default {\r\n+  components: { Tag },\r\n+  props: {\r\n+    ingrediente: { type: String, required: true }\r\n+  },\r\n\\ No newline at end of file\n+  data() {\r\n+    return {\r\n+      selecionado: false\r\n+    }\r\n+  }\r\n+}\r\n </script>\r\n \r\n-<Template>\r\n+<template>\r\n+  <button></button>\r\n           <Tag :texto=\"ingrediente\" />\r\n \r\n-</Template>\n+</template>\r\n"
+                },
+                {
+                    "date": 1745580831753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,8 @@\n }\r\n </script>\r\n \r\n <template>\r\n-  <button></button>\r\n-  <Tag :texto=\"ingrediente\" />\r\n+  <button><Tag :texto=\"ingrediente\" /></button>\r\n+  \r\n \r\n </template>\r\n"
+                },
+                {
+                    "date": 1745580839379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,5 @@\n   <button>\r\n     <Tag :texto=\"ingrediente\" />\r\n   </button>\r\n \r\n-\r\n </template>\r\n"
+                }
+            ],
+            "date": 1745580614079,
+            "name": "Commit-0",
+            "content": "<Template>\r\n          <Tag :texto=\"ingrediente\" />\r\n\r\n</Template>"
+        }
+    ]
+}

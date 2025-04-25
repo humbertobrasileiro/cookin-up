@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/BotaoPrincipal.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745586917380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745586944085,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <script lang=\"ts\">\r\n export default {\r\n   props: {\r\n-    texto: { type: String, requered: true }\r\n+    texto: { type: String, required: true }\r\n   }\r\n }\r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1745587497313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,31 @@\n }\r\n </script>\r\n \r\n <template>\r\n-  <button>\r\n-    <p>{{ texto }}</p>\r\n+  <button class=\"paragrafo-lg botao-principal\">\r\n+    {{ texto }}\r\n\\ No newline at end of file\n   </button>\r\n-</template>\n+</template>\r\n+\r\n+<script scoped>\r\n+.botao-principal {\r\n+  width: 19.5rem;\r\n+  height: 3.5rem;\r\n+  padding: 0.5rem 1rem;\r\n+  border-radius: 2rem;\r\n+  font-weight: 700;\r\n+  color: var(--creme, #FFFAF3);\r\n+  background: var(--coral, #F0633C);\r\n+  box-shadow: 4px 4px 15px 0px rgba(255, 115, 76, 0.25);\r\n+  cursor: pointer;\r\n+  transition: 0.2s;\r\n+\r\n+  display: flex;\r\n+  justify-content: center;\r\n+  align-items: center;\r\n+}\r\n+\r\n+.botao-principal:hover {\r\n+  background: var(--ocre-hover, #D1451E);\r\n+}\r\n+</script>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745587520494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     {{ texto }}\r\n   </button>\r\n </template>\r\n \r\n-<script scoped>\r\n+<style scoped>\r\n .botao-principal {\r\n   width: 19.5rem;\r\n   height: 3.5rem;\r\n   padding: 0.5rem 1rem;\r\n@@ -32,5 +32,5 @@\n \r\n .botao-principal:hover {\r\n   background: var(--ocre-hover, #D1451E);\r\n }\r\n-</script>\n\\ No newline at end of file\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745586917380,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\nexport default {\r\n  props: {\r\n    texto: { type: String, requered: true }\r\n  }\r\n}\r\n</script>\r\n\r\n<template>\r\n  <button>\r\n    <p>{{ texto }}</p>\r\n  </button>\r\n</template>"
+        }
+    ]
+}

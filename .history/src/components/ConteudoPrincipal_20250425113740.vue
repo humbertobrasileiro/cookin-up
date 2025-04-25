@@ -19,9 +19,6 @@ export default {
     },
     removerIngrediente(ingrediente: string) {
       this.ingredientes = this.ingredientes.filter(iLista => ingrediente !== iLista);
-    },
-    navegar(pagina: Pagina) {
-      this.conteudo = pagina;
     }
   },
 }
@@ -32,9 +29,9 @@ export default {
     <SuaLista :ingredientes="ingredientes" />
 
     <SelecionarIngredientes v-if="conteudo === 'SelecionarIngredientes'" @adicionar-ingrediente="adicionarIngrediente"
-      @remover-ingrediente="removerIngrediente" @buscar-receitas="navegar('MostrarReceitas')" />
+      @remover-ingrediente="removerIngrediente" />
 
-    <MostrarReceitas v-else-if="conteudo === 'MostrarReceitas'" />
+    <MostrarReceitas v-else-if="conteudo === 'MostrarReceitas'">
   </main>
 </template>
 

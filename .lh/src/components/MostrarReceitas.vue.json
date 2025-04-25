@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/MostrarReceitas.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1745590961079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745590974366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n-<script lang=\"ts\"></script>\r\n+<script lang=\"ts\">\r\n+export default {}</script>\r\n \r\n <template></template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745590980168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n <script lang=\"ts\">\r\n-export default {}</script>\r\n+export default {}\r\n+</script>\r\n \r\n <template></template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745591513715,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n <script lang=\"ts\">\r\n export default {}\r\n </script>\r\n \r\n-<template></template>\n\\ No newline at end of file\n+<template>Mostrando receitas.</template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745591522751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n <script lang=\"ts\">\r\n export default {}\r\n </script>\r\n \r\n-<template>Mostrando receitas.</template>\n\\ No newline at end of file\n+<template>\r\n+Mostrando receitas.\r\n+</template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745591554434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,3 @@\n-<script lang=\"ts\">\r\n-export default {}\r\n-</script>\r\n-\r\n <template>\r\n-  Mostrando receitas.\r\n+  Mostrando receitas...\r\n </template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745591615731,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n <template>\r\n-  Mostrando receitas...\r\n+  <h1>Mostrando receitas...</h1>\r\n </template>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745590961079,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\"></script>\r\n\r\n<template></template>"
+        }
+    ]
+}

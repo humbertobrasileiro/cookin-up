@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 26,
+            "activePatchIndex": 27,
             "patches": [
                 {
                     "date": 1745408047868,
@@ -112,6 +112,10 @@
                 {
                     "date": 1745507549715,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,9 @@\n </script>\r\n \r\n <template>\r\n   <main class=\"conteudo-principal\">\r\n-    <section>\r\n-      <SuaLista :ingredientes=\"ingredientes\" />\r\n-    </section>\r\n+    <SuaLista :ingredientes=\"ingredientes\" />\r\n \r\n     <SelecionarIngredientes />\r\n   </main>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1745582167099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n export default {\r\n   data() {\r\n     return {\r\n-      ingredientes: [\"Alho\", \"Manteiga\", \"Orégano\"]\r\n+      ingredientes: [] as string[]\r\n     }\r\n   },\r\n   components: { SuaLista, SelecionarIngredientes }\r\n }\r\n"
                 }
             ],
             "date": 1745408047868,

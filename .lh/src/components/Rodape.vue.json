@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Rodape.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1745586137358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745586245792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,11 @@\n <script lang=\"ts\">\r\n export default {\r\n \r\n }\r\n-</script>\n\\ No newline at end of file\n+</script>\r\n+\r\n+<template>\r\n+  <p class=\"paragrafo\">\r\n+    Desenvolvido por Alura | 2023 - Projeto fictício sem fins comerciais.\r\n+  </p>\r\n+</template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745586505210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,14 @@\n }\r\n </script>\r\n \r\n <template>\r\n-  <p class=\"paragrafo\">\r\n+  <p class=\"paragrafo texto\">\r\n     Desenvolvido por Alura | 2023 - Projeto fictício sem fins comerciais.\r\n   </p>\r\n\\ No newline at end of file\n-</template>\n+</template>\r\n+\r\n+<style scoped>\r\n+.texto {\r\n+  color: var(--creme);\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745586137358,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\n  export default {\r\n    \r\n  }\r\n</script>"
+        }
+    ]
+}
