@@ -1,10 +1,9 @@
 <script lang="ts">
-import { itensDeList1EstaoEmLista2 } from '@/operacoes/listas';
-import type { PropType } from 'vue';
-import { obterReceitas } from '@/http';
+import { obterReceitas } from '@/http/index';
 import type IReceita from '@/interfaces/IReceita';
-import BotaoPrincipal from './BotaoPrincipal.vue';
 import CardReceita from './CardReceita.vue';
+import BotaoPrincipal from './BotaoPrincipal.vue';
+import type { PropType } from 'vue';
 
 export default {
   props: {
@@ -17,9 +16,8 @@ export default {
   },
   async created() {
     const receitas = await obterReceitas();
-
     this.receitasEncontradas = receitas.filter((receita) => {
-      const possoFazerReceita = itensDeList1EstaoEmLista2(receita.ingredientes, this.ingredientes);
+      const possoFazerReceita = itensDeListaEstoEmLista2(receita.ingredientes, this.ingredientes);
       return possoFazerReceita;
     })
   },

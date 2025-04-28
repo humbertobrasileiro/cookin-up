@@ -1,7 +1,7 @@
 <script lang="ts">
-import MostrarReceitas from './MostrarReceitas.vue';
-import SelecionarIngredientes from './SelecionarIngredientes.vue';
 import SuaLista from './SuaLista.vue';
+import SelecionarIngredientes from './SelecionarIngredientes.vue';
+import MostrarReceitas from './MostrarReceitas.vue';
 
 type Pagina = 'SelecionarIngredientes' | 'MostrarReceitas';
 
@@ -34,7 +34,7 @@ export default {
       <SelecionarIngredientes v-if="conteudo === 'SelecionarIngredientes'" @adicionar-ingrediente="adicionarIngrediente"
         @remover-ingrediente="removerIngrediente" @buscar-receitas="navegar('MostrarReceitas')" />
 
-      <MostrarReceitas v-else-if="conteudo === 'MostrarReceitas'" :ingredientes="ingredientes"
+      <MostrarReceitas v-else-if="conteudo === 'MostrarReceitas'"
         @editar-receitas="navegar('SelecionarIngredientes')" />
     </keep-alive>
   </main>

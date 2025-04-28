@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/operacoes/listas.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1745853152238,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1745853152237,
+            "name": "Commit-0",
+            "content": "export function itensDeList1EstaoEmLista2(lista1: unknown[], lista2: unknown[]) {\r\n  return lista1.every((itemLista1) => lista2.includes(itemLista1));\r\n}"
+        }
+    ]
+}

@@ -1,15 +1,10 @@
 <script lang="ts">
-import { itensDeList1EstaoEmLista2 } from '@/operacoes/listas';
-import type { PropType } from 'vue';
-import { obterReceitas } from '@/http';
+import { obterReceitas } from '@/http/index';
 import type IReceita from '@/interfaces/IReceita';
-import BotaoPrincipal from './BotaoPrincipal.vue';
 import CardReceita from './CardReceita.vue';
+import BotaoPrincipal from './BotaoPrincipal.vue';
 
 export default {
-  props: {
-    ingredientes: { type: Array as PropType<string[]>, required: true }
-  },
   data() {
     return {
       receitasEncontradas: [] as IReceita[]
@@ -17,11 +12,7 @@ export default {
   },
   async created() {
     const receitas = await obterReceitas();
-
-    this.receitasEncontradas = receitas.filter((receita) => {
-      const possoFazerReceita = itensDeList1EstaoEmLista2(receita.ingredientes, this.ingredientes);
-      return possoFazerReceita;
-    })
+    this.receitasEncontradas = receitas; //.slice(0, 8);
   },
   components: { BotaoPrincipal, CardReceita },
   emits: ['editarReceitas']
