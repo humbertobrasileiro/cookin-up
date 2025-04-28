@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 7,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1745410572311,
@@ -36,6 +36,22 @@
                 {
                     "date": 1745500165252,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import type ICategoria from '@/interfaces/ICategorias';\r\n \r\n-export async function obterCategorias(): ICategoria[] {\r\n+export async function obterCategorias(): Promise<ICategoria[]> {\r\n   const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/categorias.json')\r\n   const categorias: ICategoria[] = await resposta.json();\r\n   return categorias;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745592868403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,11 @@\n export async function obterCategorias(): Promise<ICategoria[]> {\r\n   const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/categorias.json')\r\n   const categorias: ICategoria[] = await resposta.json();\r\n   return categorias;\r\n+}\r\n+\r\n+export async function obterReceitas(): Promise<IReceitas[]> {\r\n+  const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/receitas.json');\r\n+  const receitas: IReceita[] = await resposta.json();\r\n+  return receitas;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745593090375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n-import type ICategoria from '@/interfaces/ICategorias';\r\n+import type ICategoria from '@/interfaces/ICategoria';\r\n+import type IReceita from '@/interfaces/IReceita';\r\n \r\n export async function obterCategorias(): Promise<ICategoria[]> {\r\n   const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/categorias.json')\r\n   const categorias: ICategoria[] = await resposta.json();\r\n"
+                },
+                {
+                    "date": 1745593115378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   const categorias: ICategoria[] = await resposta.json();\r\n   return categorias;\r\n }\r\n \r\n-export async function obterReceitas(): Promise<IReceitas[]> {\r\n+export async function obterReceitas(): Promise<IReceita[]> {\r\n   const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/receitas.json');\r\n   const receitas: IReceita[] = await resposta.json();\r\n   return receitas;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745602071075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,15 @@\n import type ICategoria from '@/interfaces/ICategoria';\r\n import type IReceita from '@/interfaces/IReceita';\r\n \r\n-export async function obterCategorias(): Promise<ICategoria[]> {\r\n-  const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/categorias.json')\r\n-  const categorias: ICategoria[] = await resposta.json();\r\n-  return categorias;\r\n+async function obterDadosURL<T>(url: string) {\r\n+  const resposta = await fetch(url);\r\n+  return resposta.json() as T;\r\n }\r\n \r\n-export async function obterReceitas(): Promise<IReceita[]> {\r\n-  const resposta = await fetch('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/receitas.json');\r\n-  const receitas: IReceita[] = await resposta.json();\r\n-  return receitas;\r\n+export async function obterCategorias() {\r\n+  return obterDadosURL<ICategoria>('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/categorias.json');\r\n+}\r\n+\r\n+export async function obterReceitas() {\r\n+  return obterDadosURL<IReceita>('https://gist.githubusercontent.com/antonio-evaldo/002ad55e1cf01ef3fc6ee4feb9152964/raw/bf463b47860043da3b3604ca60cffc3ad1ba9865/receitas.json');\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1745410572311,

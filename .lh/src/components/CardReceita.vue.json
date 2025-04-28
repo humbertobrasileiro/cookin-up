@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/CardReceita.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1745593994206,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1745594020647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,21 @@\n }\r\n </script>\r\n \r\n <template>\r\n+   <article class=\"categoria\">\r\n+    <header class=\"categoria__cabecalho\">\r\n+      <img :src=\"`/imagens/icones/categorias_ingredientes/${categoria.imagem}`\" :alt=\"categoria.nome\"\r\n+        class=\"categoria__imagem\">\r\n+      <h2 class=\"paragrafo-lg categoria__nome\">{{ categoria.nome }}</h2>\r\n+    </header>\r\n+\r\n+    <ul class=\"categoria__ingredientes\">\r\n+      <li v-for=\"ingrediente in categoria.ingredientes\" :key=\"ingrediente\">\r\n+        <IngredienteSelecionavel :ingrediente=\"ingrediente\"\r\n+          @adicionar-ingrediente=\"$emit('adicionarIngrediente', $event)\"\r\n+          @remover-ingrediente=\"$emit('removerIngrediente', $event)\" />\r\n+      </li>\r\n+    </ul>\r\n+  </article>\r\n+\r\n </template>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1745594188636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,20 +10,18 @@\n }\r\n </script>\r\n \r\n <template>\r\n-  <article class=\"categoria\">\r\n-    <header class=\"categoria__cabecalho\">\r\n-      <img :src=\"`/imagens/icones/categorias_ingredientes/${categoria.imagem}`\" :alt=\"categoria.nome\"\r\n-        class=\"categoria__imagem\">\r\n-      <h2 class=\"paragrafo-lg categoria__nome\">{{ categoria.nome }}</h2>\r\n+  <article class=\"receita\">\r\n+    <header class=\"receita__cabecalho\">\r\n+      <img :src=\"`/imagens/receitas/${receita.imagem}`\" :alt=\"receita.nome\"\r\n+        class=\"receita__imagem\">\r\n+      <h2 class=\"paragrafo-lg receita__nome\">{{ receita.nome }}</h2>\r\n     </header>\r\n \r\n-    <ul class=\"categoria__ingredientes\">\r\n-      <li v-for=\"ingrediente in categoria.ingredientes\" :key=\"ingrediente\">\r\n-        <IngredienteSelecionavel :ingrediente=\"ingrediente\"\r\n-          @adicionar-ingrediente=\"$emit('adicionarIngrediente', $event)\"\r\n-          @remover-ingrediente=\"$emit('removerIngrediente', $event)\" />\r\n+    <ul class=\"receita__ingredientes\">\r\n+      <li v-for=\"ingrediente in receita.ingredientes\" :key=\"ingrediente\">\r\n+        {{ ingrediente }}\r\n       </li>\r\n     </ul>\r\n   </article>\r\n \r\n"
+                },
+                {
+                    "date": 1745600974519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,5 +23,12 @@\n       </li>\r\n     </ul>\r\n   </article>\r\n \r\n-</template>\n\\ No newline at end of file\n+</template>\r\n+\r\n+<style scoped>\r\n+.receita__imagem {\r\n+  width: 282px;\r\n+  height: 150px;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1745593994206,
+            "name": "Commit-0",
+            "content": "<script lang=\"ts\">\r\nimport type IReceita from '@/interfaces/IReceita';\r\nimport type { PropType } from 'vue';\r\nexport default {\r\n  props: {\r\n    receita: { type: Object as PropType<IReceita>, required: true }\r\n  },\r\n  components: {},\r\n  emits: []\r\n}\r\n</script>\r\n\r\n<template>\r\n</template>"
+        }
+    ]
+}
